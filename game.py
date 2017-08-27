@@ -21,6 +21,9 @@ class Game(cmd.Cmd):
         else:
             self.loc = get_room(newroom, self.dbfile)
             self.look()
+        if newroom == 13:
+            print("You win!!!")
+            exit()
 
     def look(self):
         print(self.loc.name)
